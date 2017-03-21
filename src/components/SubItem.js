@@ -21,8 +21,8 @@ export default class Subitem extends Component {
 						<p>{this.store.item.body}</p>
 					</article>
 				)}
-
 			</div>
+
 		)
 	}
 }

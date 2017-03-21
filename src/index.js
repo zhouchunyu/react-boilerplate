@@ -4,13 +4,15 @@ import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 import App from './components/App'
 import AppState from './stores/AppState'
-import Mock from 'mockjs'
 
+//将mock移动到单独文件
+import Mock from 'mockjs'
 Mock.mock(/\/domain\/list\.json/, {
-  'name' : '[@name](/user/name)()',
-  'age|1-100': 100,
-  'color' : '[@color](/user/color)'
+    'name' : '[@name](/user/name)()',
+    'age|1-100': 100,
+    'color' : '[@color](/user/color)'
 });
+
 
 const appState = new AppState();
 

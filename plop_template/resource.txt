@@ -29,6 +29,7 @@ export default class Subpage extends Component {
           render: () => (
             <span>
               <a href="#">Delete</a>
+              <span className="ant-divider" />
               <a href="#">Update</a>
             </span>
           ),

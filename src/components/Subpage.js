@@ -48,6 +48,7 @@ export default class Subpage extends Component {
 						{/*</li>*/}
 					{/*}) : 'Loading...'}*/}
 				{/*</ul>*/}
+
 				<Table dataSource = { this.store.items } columns = {columns} />
 			</div>
 		)

@@ -49,10 +49,10 @@ export default class App extends Component {
 						  path="/login"
 						  render={(props) => <LazyRoute {...props} component={import('./Login')} />}
 						/>
-						{!!(timeToRefresh && timeToRefresh <= 4) && this.store.refreshToken()}
-					<footer>
-						Cobbled together by <a href="https://twitter.com/mhaagens" target="_blank">@mhaagens</a> | github: <a href="https://github.com/mhaagens" target="_blank">mhaagens</a>
-					</footer>
+                        {!!(timeToRefresh && timeToRefresh <= 4) && this.store.refreshToken()}
+					{/*<footer>*/}
+						{/*Cobbled together by <a href="https://twitter.com/mhaagens" target="_blank">@mhaagens</a> | github: <a href="https://github.com/mhaagens" target="_blank">mhaagens</a>*/}
+					{/*</footer>*/}
 					</div>
 				</Provider>
 			</Router>

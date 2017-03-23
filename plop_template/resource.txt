@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { inject, observer } from 'mobx-react'
 import { Match, Link } from 'react-router-dom'
 
-import Protected from './Protected'
-import DataWrapper from './DataWrapper'
+import Protected from '../Protected'
+import DataWrapper from '../DataWrapper'
 
 import { Table } from 'antd';
 import 'antd/dist/antd.css'
@@ -29,6 +29,7 @@ export default class Subpage extends Component {
           render: () => (
             <span>
               <a href="#">Delete</a>
+              <a href="#">Update</a>
             </span>
           ),
         }

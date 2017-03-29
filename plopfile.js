@@ -29,8 +29,20 @@ module.exports = function (plop) {
         actions: [
             {
                 type: 'add',
-                path: 'src/components/{{snakeCase resource}}/{{snakeCase resource}}.js',
-                templateFile: 'plop_template/resource.txt',
+                path: 'src/components/{{snakeCase resource}}/index.js',
+                templateFile: 'plop_template/index.txt',
+                abortOnFail: true
+            },
+            {
+                type: 'add',
+                path: 'src/components/{{snakeCase resource}}/edit_{{snakeCase resource}}.js',
+                templateFile: 'plop_template/edit.txt',
+                abortOnFail: true
+            },
+            {
+                type: 'add',
+                path: 'src/components/{{snakeCase resource}}/show_{{snakeCase resource}}.js',
+                templateFile: 'plop_template/show.txt',
                 abortOnFail: true
             },
             {

@@ -1,0 +1,23 @@
+import React, { Component } from 'react'
+import { Form, Input, Select, Button } from 'antd';
+import 'antd/dist/antd.css'
+
+const FormItem = Form.Item;
+
+class {{pascalCase resource}}Form extends Component {
+  render() {
+    return (
+      <Form layout="inline">
+        <FormItem label="Price">
+          <h2>{this.props.params.id}</h2>
+        </FormItem>
+        <FormItem>
+          <Button type="primary" htmlType="submit">Submit</Button>
+        </FormItem>
+      </Form>
+    );
+  }
+}
+
+const Wrapped{{pascalCase resource}}Form = Form.create()({{pascalCase resource}}Form);
+export default Wrapped{{pascalCase resource}}Form

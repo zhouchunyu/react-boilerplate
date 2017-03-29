@@ -1,6 +1,16 @@
 <Route
                           exact
                           path='/{{snakeCase resource}}'
-                          render={(props) => <LazyRoute {...props} component={import('./{{snakeCase resource}}/{{snakeCase resource}}')} />}
+                          render={(props) => <LazyRoute {...props} component={import('./{{snakeCase resource}}/index')} />}
+                        />
+                        <Route
+                          exact
+                          path='/{{snakeCase resource}}/:id/edit'
+                          render={(props) => <LazyRoute {...props} component={import('./{{snakeCase resource}}/edit_{{snakeCase resource}}')} />}
+                        />
+                        <Route
+                          exact
+                          path='/{{snakeCase resource}}/:id'
+                          render={(props) => <LazyRoute {...props} component={import('./{{snakeCase resource}}/show_{{snakeCase resource}}')} />}
                         />
                         {!!

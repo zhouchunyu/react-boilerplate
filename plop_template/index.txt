@@ -9,7 +9,7 @@ import { Table } from 'antd';
 import 'antd/dist/antd.css'
 
 @Protected @DataWrapper @inject("store") @observer
-export default class Subpage extends Component {
+export default class {{pascalCase resource}} extends Component {
 	constructor(props) {
 		super(props)
 		this.store = this.props.store
@@ -28,9 +28,11 @@ export default class Subpage extends Component {
           key: 'action',
           render: () => (
             <span>
-              <a href="#">Delete</a>
+              <a href="#">显示</a>
               <span className="ant-divider" />
-              <a href="#">Update</a>
+              <a href="#">编辑</a>
+              <span className="ant-divider" />
+              <a href="#">删除</a>
             </span>
           ),
         }

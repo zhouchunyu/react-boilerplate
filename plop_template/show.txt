@@ -18,8 +18,8 @@ export default class {{pascalCase resource}}Form extends Component {
             <div>
             {{#each attrs}}
               <p><label>{{name}}</label>{this.store.item.{{name}}}</p>
-            </div>
             {{/each}}
+            </div>
           )}
       </div>
     );

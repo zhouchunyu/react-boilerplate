@@ -1,24 +1,23 @@
 import React, { Component } from 'react'
-import { inject, observer } from 'mobx-react'
 
-import 'antd/dist/antd.css'
+import { inject, observer } from 'mobx-react'
+import Protected from '../Protected'
 import DataWrapper from '../DataWrapper'
 
-@DataWrapper @inject("store") @observer
+import 'antd/dist/antd.css'
+
+@Protected @DataWrapper @inject("store") @observer
 export default class {{pascalCase resource}}Form extends Component {
-    constructor(props) {
-        super(props)
-        this.store = this.props.store
-    }
   render() {
     return (
-      <div>
-          {{#each attrs}}
-            <div>
-              {{name}}: { this.store.item.{{name}} }
-            </div>
-          {{/each}}
-      </div>
+      <Form layout="inline">
+        <FormItem label="Price">
+          <h2>{this.props.id}</h2>
+        </FormItem>
+        <FormItem>
+          <Button type="primary" htmlType="submit">Submit</Button>
+        </FormItem>
+      </Form>
     );
   }
 }

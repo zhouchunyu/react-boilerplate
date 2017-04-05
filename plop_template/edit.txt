@@ -4,14 +4,18 @@ import { inject, observer } from 'mobx-react'
 import 'antd/dist/antd.css'
 import DataWrapper from '../DataWrapper'
 
-@DataWrapper @inject("store") @Observer
+@DataWrapper @inject("store") @observer
 export default class {{pascalCase resource}}Form extends Component {
+    constructor(props) {
+        super(props)
+        this.store = this.props.store
+    }
   render() {
     return (
       <div>
           {{#each attrs}}
             <div>
-                {{name}}:{this.prop.{{name}}}
+              {{name}}: { this.store.item.{{name}} }
             </div>
           {{/each}}
       </div>

@@ -26,13 +26,13 @@ export default class {{pascalCase resource}} extends Component {
         {
           title: 'Action',
           key: 'action',
-          render: () => (
+          render: (text, record, index) => (
             <span>
-              <a href="#">显示</a>
+              <Link to="{{resource}}/index">显示</Link>
               <span className="ant-divider" />
-              <a href="#">编辑</a>
+              <Link to="{{resource}}/index">编辑</Link>
               <span className="ant-divider" />
-              <a href="#">删除</a>
+              <Link to="{{resource}}/index">删除</Link>
             </span>
           ),
         }
